@@ -1,0 +1,53 @@
+<div class="container-fluid mt-5">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://static.vecteezy.com/system/resources/previews/002/006/507/non_2x/paper-art-shopping-online-on-smartphone-and-new-buy-sale-promotion-summer-backgroud-for-banner-market-ecommerce-free-vector.jpg" class="d-block w-100" alt="..." height="600px">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-vector/online-shopping-store-website-mobile-phone-design-smart-business-marketing-concept-horizontal-view-vector-illustration_62391-476.jpg?size=626&ext=jpg" class="d-block w-100" alt="..." height="600px">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-vector/summer-sale-3d-banner-design-realistic-render-scene-tropical-palm-tree-sun-rainbow-cloud-tropic-promo-offer-holiday-web-poster-seasonal-discount-coupon-brochure-voucher-summertime-layout_1016-9120.jpg?size=626&ext=jpg" class="d-block w-100" alt="..."  height="600px">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let item of allproduct">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img routerLink="/viewproduct/{{item.id}}" class="card-img-top" [src]="item.image" height="200px" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{item.title}}</h5>
+                            <!-- Product price-->
+                           <h5> ${{item.price}}</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex justify-content-between">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"><i class="fa-solid fa-heart text-danger"></i></a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"><i class="fa-solid fa-cart-shopping text-danger"></i></a></div>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+    </div>
+</section>
